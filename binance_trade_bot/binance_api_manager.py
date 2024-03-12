@@ -145,7 +145,7 @@ class BinanceAPIManager:
 
     @cached(cache=TTLCache(maxsize=2000, ttl=43200))
     def get_min_notional(self, origin_symbol: str, target_symbol: str):
-        return float(self.get_symbol_filter(origin_symbol, target_symbol, "MIN_NOTIONAL")["minNotional"])
+        return float(self.get_symbol_filter(origin_symbol, target_symbol, "NOTIONAL")["minNotional"])
 
     def _wait_for_order(
         self, order_id, origin_symbol: str, target_symbol: str
