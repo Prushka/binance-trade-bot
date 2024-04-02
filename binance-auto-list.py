@@ -7,7 +7,7 @@ import pandas as pd
 import seaborn as sn
 
 bridge = 'USDT'
-startcoin = 'SOL'
+startcoin = 'TRX'
 size_of_list = 18
 api_key = "2q3NlYGs9oVSs0I1szP7UHMwd9YaEM8lj6xp2fb1E37GoIU0TDoIibKndRH46D1Q"
 api_secret = "np7OW0y7uaMmr9O372v1mGevgBNi4w4jG6kRbsmCuNEbGkJ3a1EoS9oActkygrVk"
@@ -100,7 +100,7 @@ def pick_coins(start_ticker, day_corr, week_corr, two_week_corr, n):
 
 
 if __name__ == '__main__':
-
+    print("Starting: Bridge: " + bridge, "Startcoin: " + startcoin, "Size of list: " + str(size_of_list))
     # Download ALL the coinpairs from binance
     exchange_info = client.get_exchange_info()
 
