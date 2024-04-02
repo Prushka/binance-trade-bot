@@ -181,7 +181,7 @@ if __name__ == '__main__':
             print(data['symbol'], ' 24hr trade volume is ', usdtradevol, bridge)
             if usdtradevol < 3000000:
                 print('Warning, low trade volumes can increase the probability of slippage')
-                coins.remove(data['symbol'])
+                coins.remove(data['symbol'][0:-len(bridge)])
 
     print("Coins with low trade volume removed: " + str(len(coins)))
 
